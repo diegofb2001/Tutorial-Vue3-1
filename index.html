@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Hola Vue 3!</title>
+</head>
+<body>
+     
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- CDN de Vue3 para etapa de desarrollo -->
+
+<div id="app">{{ message }}</div> <!-- este es el div donde se ejecuta mi código Vue y se identifica por el id="app"-->
+
+<script>
+  const { createApp } = Vue /* Crea mi instancia de Vue */
+
+  createApp({  /* Función que crea el cnteido de mi app en Vue */
+    data() { /* función dentro de creatApp donde corre mi código Vue */
+      return { /* return que devuelve un objeto con el atributo message y su valor */
+        message: 'Hola Vue 3!' /* Atributo a devolver por el objeto return */
+      }
+    }
+  }).mount('#app') /* Indica dónde se montará mi código gracias al id en el códidgo HTML idetificado con el id app*/
+</script>
+
+</body>
+</html>
